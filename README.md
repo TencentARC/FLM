@@ -1,5 +1,7 @@
 # FLM
-Official code for "Accelerating Vision-Language Pretraining with Free Language Modeling" (CVPR 2023)
+Official code for "Accelerating Vision-Language Pretraining with Free Language Modeling" (CVPR 2023) 
+
+Paper: https://arxiv.org/abs/2303.14038
 
 
 ## Introduction
