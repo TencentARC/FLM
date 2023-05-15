@@ -47,13 +47,13 @@ FLM-CLIP32-RoBERTa fintuned on NLVR2 (resolution: 288^2) [link](https://github.c
 ```bash
 # training: 4 gpu
 python run.py with data_root=<DOWNSTREAM_DATA_DIR> exp_name="pretrain_FLM_4m_ft_vqa_train" \
-      num_gpus=4 resume_from=None fix_exp_version=True load_path="flm_pretrain.ckpt" \
+      num_gpus=4 resume_from=None fix_exp_version=True load_path="pretrain_4m.ckpt" \
       ft_vqa text_roberta  image_size=576 clip32 causal_flm \
       learning_rate=0.000005 batch_size=512 per_gpu_batchsize=32 log_dir='result_ft' clip_randaug
 
 # testing: 4 gpu
 python run.py with data_root=<DOWNSTREAM_DATA_DIR> exp_name="pretrain_FLM_4m_ft_vqa_test" \
-      num_gpus=4 load_path="flm_vqa.ckpt" \
+      num_gpus=4 load_path="pretrain_4M_ft_vqa.ckpt" \
       ft_vqa text_roberta  image_size=576 clip32 causal_flm \
       per_gpu_batchsize=32 log_dir='result_ft' test_only=True skip_test_step=True
 ```
@@ -62,13 +62,13 @@ python run.py with data_root=<DOWNSTREAM_DATA_DIR> exp_name="pretrain_FLM_4m_ft_
 ```bash
 # training: 1 gpu
 python run.py with data_root=<DOWNSTREAM_DATA_DIR> exp_name="pretrain_FLM_4m_ft_nlvr2_train" \
-      num_gpus=1 resume_from=None fix_exp_version=True load_path="flm_pretrain.ckpt" \
+      num_gpus=1 resume_from=None fix_exp_version=True load_path="pretrain_4m.ckpt" \
       ft_nlvr2 text_roberta  image_size=288 clip32 causal_flm \
       learning_rate=0.00001 batch_size=256 per_gpu_batchsize=32 log_dir='result_ft' clip_randaug
 
 # testing: 1 gpu
 python run.py with data_root=<DOWNSTREAM_DATA_DIR> exp_name="pretrain_FLM_4m_ft_nlvr2_test" \
-      num_gpus=1 load_path="flm_nlvr2.ckpt" \
+      num_gpus=1 load_path="pretrain_4M_ft_nlvr2.ckpt" \
       ft_nlvr2 text_roberta  image_size=288 clip32 causal_flm \
       per_gpu_batchsize=32 log_dir='result_ft' test_only=True skip_test_step=True
 ```
@@ -77,13 +77,13 @@ python run.py with data_root=<DOWNSTREAM_DATA_DIR> exp_name="pretrain_FLM_4m_ft_
 ```bash
 # training: 4 gpu
 python run.py with data_root=<DOWNSTREAM_DATA_DIR> exp_name="pretrain_FLM_4m_ft_cap_coco_train" \
-      num_gpus=4 resume_from=None fix_exp_version=True load_path="flm_pretrain.ckpt" \
+      num_gpus=4 resume_from=None fix_exp_version=True load_path="pretrain_4m.ckpt" \
       ft_cap_coco text_roberta  image_size=288 clip32 causal_flm \
       learning_rate=0.000003 batch_size=256 per_gpu_batchsize=64 log_dir='result_ft' clip_randaug
 
 # testing: 4 gpu
 python run.py with data_root=<DOWNSTREAM_DATA_DIR> exp_name="pretrain_FLM_4m_ft_cap_coco_test" \
-      num_gpus=4 load_path="flm_cap_coco.ckpt" \
+      num_gpus=4 load_path="pretrain_4M_ft_cap.ckpt" \
       ft_cap_coco text_roberta  image_size=384 clip32 causal_flm \
       per_gpu_batchsize=64 log_dir='result_ft' test_only=True skip_test_step=True
 ```
@@ -93,13 +93,13 @@ python run.py with data_root=<DOWNSTREAM_DATA_DIR> exp_name="pretrain_FLM_4m_ft_
 ```bash
 # training: 8 gpu
 python run.py with data_root=<DOWNSTREAM_DATA_DIR> exp_name="pretrain_FLM_4m_ft_irtr_f30k_train" \
-      num_gpus=8 resume_from=None fix_exp_version=True load_path="flm_pretrain.ckpt" \
+      num_gpus=8 resume_from=None fix_exp_version=True load_path="pretrain_4m.ckpt" \
       ft_irtr_f30k text_roberta  image_size=384 clip32 causal_flm precision=16 \
       learning_rate=0.000005 batch_size=512 per_gpu_batchsize=8 log_dir='result_ft' clip_randaug
 
 # testing: 8 gpu
 python run.py with data_root=<DOWNSTREAM_DATA_DIR> exp_name="pretrain_FLM_4m_ft_irtr_f30k_test" \
-      num_gpus=8 load_path="flm_irtr_f30k.ckpt" \
+      num_gpus=8 load_path="pretrain_4M_ft_irtr_f30k.ckpt" \
       ft_irtr_f30k text_roberta  image_size=384 clip32 causal_flm \
       per_gpu_batchsize=8 log_dir='result_ft' test_only=True skip_test_step=True
 ```
