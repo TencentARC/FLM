@@ -35,6 +35,12 @@ python run.py with data_root=<DATA_DIR> exp_name="pretrain_FLM_4m" \
     precision=16 max_steps=30000 learning_rate=0.00008 \
     batch_size=4096 per_gpu_batchsize=64 warmup_steps=0.05
 ```
+#### Pretrained Checkpoints
+FLM-CLIP32-RoBERTa (resolution: 288^2) pre-trained on GCC+SBU+COCO+VG [link](https://github.com/TencentARC/FLM/releases/download/checkpoints/pretrain_4m.ckpt)
+
+FLM-CLIP32-RoBERTa fintuned on VQAv2 (resolution: 576^2) [link](https://github.com/TencentARC/FLM/releases/download/checkpoints/pretrain_4M_ft_vqa.ckpt)
+
+FLM-CLIP32-RoBERTa fintuned on NLVR2 (resolution: 288^2) [link](https://github.com/TencentARC/FLM/releases/download/checkpoints/pretrain_4m_ft_nlvr2.ckpt)
 
 ## Evaluation on Downstream Tasks
 #### Visual Question Answering (VQA v2)
